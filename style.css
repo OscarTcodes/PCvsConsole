@@ -1,0 +1,332 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Unna', serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Coda', cursive;
+    font-size: 60px;
+}
+
+
+/* Nav bar sticky meaning it would always stick with you when scrolling */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.con {
+    background-color: #ff0606;
+}
+
+
+/* Background pic for header */
+
+header {
+    background-image: url(/~ogt7517/140/project/project3/imgs/cover.png);
+    height: 800px;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+
+/* Styling for introduction */
+
+#introCon {
+    display: flex;
+    justify-content: center;
+}
+
+#introduction {
+    display: grid;
+    grid-template-columns: 550px 550px;
+    grid-template-rows: 120px 340px 100px 420px;
+    grid-template-areas: "introheader introheader" "introtext introvid" "cat cat" "price1img pricetxt" "chart chart" "price2img pricetxt2" "spechead spechead" "spectxt1 spectxt1""tab tab";
+    gap: 45px;
+}
+
+.introhead {
+    text-decoration: underline;
+    text-align: center;
+    margin: 20px;
+    grid-area: introheader;
+}
+
+.intropara {
+    margin-left: 80px;
+    grid-area: introtext;
+    align-self: start;
+    place-self: center;
+}
+
+.intromedia {
+    object-fit: cover;
+    grid-area: introvid;
+}
+
+.intromedia iframe {
+    width: 100%;
+}
+
+
+/* Stlying for Price Section */
+
+.cathead {
+    text-align: center;
+    grid-area: cat;
+}
+
+#price1img {
+    width: 100%;
+    height: 100%;
+    grid-area: price1img;
+}
+
+#price1img img {
+    height: 100%;
+    width: 100%;
+}
+
+#price1txt {
+    align-self: start;
+    place-self: center;
+    grid-area: pricetxt;
+}
+
+#price2img {
+    width: 100%;
+    height: 100%;
+    grid-area: price2img;
+}
+
+#price2img img {
+    width: 100%;
+}
+
+#price2txt {
+    align-self: start;
+    place-self: center;
+    grid-area: pricetxt2;
+}
+
+.spectxt1 {
+    grid-area: spectxt1;
+}
+
+#spechead {
+    grid-area: spechead;
+}
+
+.container {
+    margin-bottom: 40px;
+    grid-area: chart;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 32px;
+}
+
+.container div {
+    margin: 10px;
+    width: 400px;
+    border: 1px #ccc solid;
+}
+
+.box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.box p {
+    margin: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container img {
+    width: 80%;
+}
+
+
+/* table */
+
+.t {
+    grid-area: tab;
+}
+
+.t img {
+    width: 100%;
+}
+
+td {
+    border: 1px solid black;
+    border-spacing: 30px;
+}
+
+td:nth-child(even) {
+    background-color: #D6EEEE;
+}
+
+table {
+    border-spacing: 5px 20px;
+}
+
+
+/* buttons styling */
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+    color: black;
+    border: 2px solid #53818d;
+}
+
+.button:hover {
+    background-color: #3460db;
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+
+/* Styling for Hardware Section */
+
+@media only screen and (max-width: 750px) {
+    #introduction {
+        grid-template-columns: 50%;
+        grid-template-rows: 120px 340px 100px 420px;
+        grid-template-areas: "introheader introheader" "introtext introvid" "cat cat" "price1img pricetxt" "chart chart" "price2img pricetxt2" "spechead spechead" "spectxt1 spectxt1""tab tab";
+        gap: 55px;
+    }
+    .introhead {
+        text-decoration: underline;
+        text-align: center;
+        margin: 20px;
+        grid-area: introheader;
+    }
+    .intropara {
+        /* margin-left: 80px; */
+        grid-area: introtext;
+        align-self: start;
+        place-self: center;
+    }
+    .intropara p {
+        font-size: 20px;
+        width: 100%;
+    }
+    .intromedia {
+        object-fit: cover;
+        grid-area: introvid;
+    }
+    #cathead {
+        text-align: center;
+        grid-area: cat;
+    }
+    #price1img {
+        width: 100%;
+        height: 100%;
+        grid-area: price1img;
+    }
+    #price1img img {
+        height: 100%;
+        width: 100%;
+    }
+    #price1txt {
+        align-self: start;
+        place-self: center;
+        grid-area: pricetxt;
+    }
+    #price2img {
+        width: 100%;
+        height: 100%;
+        grid-area: price2img;
+    }
+    #price2img img {
+        width: 100%;
+    }
+    #price2txt {
+        align-self: start;
+        place-self: center;
+        grid-area: pricetxt2;
+    }
+    .container {
+        margin-bottom: 40px;
+        grid-area: chart;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .spectxt1 {
+        grid-area: spectxt1;
+    }
+    #spechead {
+        grid-area: spechead;
+    }
+    .t {
+        grid-area: tab;
+    }
+    .t img {
+        width: 100%;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+}
